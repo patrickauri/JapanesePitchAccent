@@ -37,10 +37,11 @@ function App() {
         <input type="text" placeholder="Search Japanese Word" />
         <button type="submit">Search</button>
       </form>
-      {/* {pitch.map((e) => (
-        <p>{e["Word 1A"]}</p>
-      ))} */}
-      <PitchCard />
+      <div className="results-container">
+        {pitch.map((e, i) => (
+          <PitchCard key={i} data={e} />
+        ))}
+      </div>
     </React.Fragment>
   )
 }
