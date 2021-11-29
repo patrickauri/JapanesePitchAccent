@@ -1,11 +1,12 @@
 import React, { useState } from "react"
+import PitchCard from "./components/PitchCard"
 const db = require("./db/NHKdata.json")
 
 function App() {
   const [pitch, setPitch] = useState([])
 
   const getPitch = (e) => {
-    // Get all results including the query
+    // Get all results starting with the query
     const results = db.filter(
       (item) =>
         item["Word 1A"].includes(e) &&
@@ -30,11 +31,16 @@ function App() {
 
   return (
     <React.Fragment>
+      <h1>Simple Pitch</h1>
+      <h2>created by Patrick Auri</h2>
       <form onSubmit={(e) => handleSubmit(e)}>
         <input type="text" placeholder="Search Japanese Word" />
         <button type="submit">Search</button>
       </form>
-      <p>{JSON.stringify(pitch)}</p>
+      {/* {pitch.map((e) => (
+        <p>{e["Word 1A"]}</p>
+      ))} */}
+      <PitchCard />
     </React.Fragment>
   )
 }
