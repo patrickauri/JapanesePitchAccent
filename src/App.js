@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import PitchCard from './components/PitchCard'
 const db = require('./db/NHKdata.json')
 
-function App() {
+const App = () => {
     const [pitch, setPitch] = useState([])
 
     const getPitch = (e) => {
