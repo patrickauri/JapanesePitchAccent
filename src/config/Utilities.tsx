@@ -8,20 +8,32 @@
 //
 //
 
-export const ParseNHK = (data) => {
+interface Result {
+  word: string
+  pitchNumber: number
+  reading: string
+  pitchType: string
+}
+
+export const ParseNHK = (data: any) => {
   const dWord = data["Word 1A"]
   const dPitch = data["Pitch 1.1"]
 
-  let result = { word: "", pitchNumber: -1, reading: [], pitchType: "" }
+  let result: Result = {
+    word: "empty",
+    pitchNumber: -1,
+    reading: "no reading",
+    pitchType: "no type",
+  }
 
-  const IsPitchSmallKana = (x) => {
+  /* const IsPitchSmallKana = (x) => {
     const kanaArray = ["ゃ", "ゅ", "ょ"]
 
     kanaArray.forEach((k) => {
       if (x === k) return true
     })
     return false
-  }
+  } */
 
   const ParseNHKWord = () => {
     const locStart = dWord.indexOf("【") + 1
@@ -31,7 +43,7 @@ export const ParseNHK = (data) => {
 
   const ParseNHKReading = () => {
     const readingKana = dWord.substring(0, dWord.indexOf("【"))
-    let a = []
+    let a: string[] = []
 
     if (dPitch.indexOf("￣") === -1) {
       // Kifukushiki

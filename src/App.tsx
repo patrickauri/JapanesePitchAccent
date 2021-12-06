@@ -5,10 +5,10 @@ const db = require("./db/NHKdata.json")
 const App = () => {
   const [pitch, setPitch] = useState([])
 
-  const getPitch = (e) => {
+  const getPitch = (e: any) => {
     // Get all results starting with the query
     const results = db.filter(
-      (item) =>
+      (item: any) =>
         item["Word 1A"].includes(e) &&
         item["Word 1A"][item["Word 1A"].indexOf(e) - 1] === "【"
     )
@@ -22,7 +22,7 @@ const App = () => {
     }
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault()
     const input = e.target[0].value
 
