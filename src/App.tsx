@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { resourceLimits } from 'worker_threads'
 import PitchCard from './components/PitchCard'
 const db = require('./db/NHKdata.json')
 
@@ -7,13 +8,10 @@ const App = () => {
 
     const getPitch = (e: any) => {
         // Get all results starting with the query
-        const results = db.filter(
-            (item: any) =>
-                item['Word 1A'].includes(e) &&
-                item['Word 1A'][item['Word 1A'].indexOf(e) - 1] === '【'
-        )
-
+        const results = db.filter((item: any) => item['Word 1A'].includes(e))
         if (results) {
+            // item['Word 1A'][item['Word 1A'].indexOf(e) - 1] === '【'
+
             setPitch(results)
         } else {
             setPitch([])
