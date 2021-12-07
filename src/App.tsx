@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { resourceLimits } from 'worker_threads'
 import PitchCard from './components/PitchCard'
 const db = require('./db/NHKdata.json')
 
