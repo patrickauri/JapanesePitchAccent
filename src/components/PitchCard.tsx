@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react"
 import { GetPitchTypeName, ParseNHK } from "../config/Utilities"
 
 export default function PitchCard({ data }: any) {
@@ -23,5 +24,33 @@ export default function PitchCard({ data }: any) {
 }
 
 const PitchDrawing = ({ reading, pitchNumber }: any) => {
-  return <div className="">test</div>
+  let readingList = []
+
+  for (let index = 0; index < reading.length; index++) {
+    const _mora: any = reading[index]
+    console.log(index)
+    if (pitchNumber === 0) {
+      // Heiban
+      if (index === 0) {
+        console.log(`Index: ${index} Mora: ${_mora}`)
+        readingList.push({ mora: _mora, type: "rise" })
+      } else {
+        readingList.push({ mora: _mora, type: "high" })
+      }
+    }
+
+    readingList.push(_mora)
+  }
+
+  console.table(readingList)
+
+  return (
+    <div className="pitch-container">
+      {readingList.map((e, i) => (
+        <span key={i} className={"pitch-" + e.type}>
+          {e.mora}
+        </span>
+      ))}
+    </div>
+  )
 }
