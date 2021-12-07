@@ -1,4 +1,3 @@
-import React from 'react'
 import { GetPitchTypeName, ParseNHK } from '../config/Utilities'
 
 export default function PitchCard({ data }: any) {

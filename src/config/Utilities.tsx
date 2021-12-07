@@ -138,7 +138,7 @@ export const GetPitchTypeName = (n: PitchType) => {
         case PitchType.Nakadaka:
             return 'Nakadaka'
         case PitchType.Odaka:
-            return 'Heiban'
+            return 'Odaka'
         default:
             return 'ERROR'
     }
