@@ -91,15 +91,11 @@ export const ParseNHK = (data: any) => {
     const ParseNHKMora = () => {
         for (let index = 0; index < result.reading.length; index++) {
             const m = result.reading[index]
-            console.log(m)
             if (!IsSmallKana(m)) {
                 dMora++
             }
         }
         result.mora = dMora
-        console.log(
-            `Word: ${result.word}: ${dMora} mora (reading: ${result.reading})`
-        )
     }
 
     const ParseNHKPitchType = () => {
