@@ -15,7 +15,12 @@ export default function PitchCard({ data }: any) {
                     pitchNumber={parsedData.pitchNumber}
                 />
             </div>
-            <div className='card-bottom'>
+            <div
+                className={
+                    'card-bottom card-' +
+                    GetPitchTypeName(parsedData.pitchType).toLowerCase()
+                }
+            >
                 {GetPitchTypeName(parsedData.pitchType)}
             </div>
         </div>
