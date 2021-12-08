@@ -26,8 +26,8 @@ const App = () => {
 
   return (
     <React.Fragment>
-      <h1>Simple Pitch</h1>
-      <h2>created by Patrick Auri</h2>
+      <h1>KT Accent</h1>
+      <h2>Japanese Pitch Accent Dictionary</h2>
       <form onSubmit={(e) => handleSubmit(e)}>
         <input type="text" placeholder="Search Japanese Word" />
         <button type="submit">Search</button>

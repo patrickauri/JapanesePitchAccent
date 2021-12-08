@@ -39,6 +39,11 @@ input {
   border: none;
   border-radius: 1em;
   margin-right: 2em;
+  min-width: 20%;
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
 }
 
 input:focus,
@@ -47,6 +52,7 @@ button:focus {
 }
 
 button {
+  min-width: 8%;
   padding: 1em;
   color: var(--text-main);
   font-size: small;
