@@ -1,151 +1,174 @@
 :root {
-    --text-main: rgb(36, 36, 36);
-    --text-secondary: rgb(173, 173, 173);
-    --background-btn-primary: rgb(66, 132, 255);
-    --background-btn-contrast: rgb(6, 15, 32);
-    --text-btn-primary: white;
+  --text-main: rgb(36, 36, 36);
+  --text-secondary: rgb(173, 173, 173);
+  --background-btn-primary: rgb(66, 132, 255);
+  --background-btn-contrast: rgb(6, 15, 32);
+  --text-btn-primary: white;
 }
 * {
-    font-family: 'Murecho', sans-serif;
+  font-family: "Murecho", sans-serif;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
-    background-color: rgb(236, 236, 243);
-    color: var(--text-main);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  background-color: rgb(236, 236, 243);
+  color: var(--text-main);
 }
 
 h2 {
-    font-size: medium;
-    font-weight: normal;
-    color: var(--text-secondary);
+  font-size: medium;
+  font-weight: normal;
+  color: var(--text-secondary);
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 input {
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
-    padding: 1em;
-    background-color: rgb(255, 255, 255);
-    color: var(--text-main);
-    font-size: small;
-    border: none;
-    border-radius: 1em;
-    margin-right: 2em;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 1em;
+  background-color: rgb(255, 255, 255);
+  color: var(--text-main);
+  font-size: small;
+  border: none;
+  border-radius: 1em;
+  margin-right: 2em;
 }
 
 input:focus,
 button:focus {
-    outline: none;
+  outline: none;
 }
 
 button {
-    padding: 1em;
-    color: var(--text-main);
-    font-size: small;
-    font-weight: bold;
-    border: none;
-    border-radius: 1em;
-    background-color: var(--background-btn-contrast);
-    color: var(--text-btn-primary);
+  padding: 1em;
+  color: var(--text-main);
+  font-size: small;
+  font-weight: bold;
+  border: none;
+  border-radius: 1em;
+  background-color: var(--background-btn-contrast);
+  color: var(--text-btn-primary);
 }
 
 button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #root {
-    height: 80vh;
-    text-align: center;
+  height: 80vh;
+  text-align: center;
 }
 
 .card {
-    margin: 1em;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
-    max-width: 30em;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 1.5em;
+  margin: 1em;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+  max-width: 30em;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 1.5em;
 }
 
 .card-top {
-    padding: 1em 1em 0 1em;
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: center;
+  padding: 1em 1em 0 1em;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
 }
 
 .card-number {
-    color: var(--text-secondary);
+  color: var(--text-secondary);
 }
 
 .card-title {
-    font-weight: bold;
-    font-size: large;
-    margin-right: 0.5em;
+  font-weight: bold;
+  font-size: large;
+  margin-right: 0.5em;
 }
 
 .card-reading {
-    padding: 0.5em 1em 0.5em 1em;
+  padding: 1em;
 }
 
 .card-bottom {
-    border-radius: 0 0 1.5em 1.5em;
-    font-size: small;
-    padding: 0.25em 1em 0.25em 1em;
+  border-radius: 0 0 1.5em 1.5em;
+  font-size: small;
+  padding: 0.4em 1em 0.4em 1em;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  font-weight: 500;
 }
 
 .results-container {
-    margin-top: 2em;
-    display: grid;
+  margin-top: 2em;
+  display: grid;
 }
 
 .pitch-rise,
 .pitch-high,
 .pitch-drop,
 .pitch-low {
-    border-style: solid;
-    border-color: var(--background-btn-primary);
-    box-sizing: border-box;
+  border-style: solid;
+  border-color: var(--background-btn-primary);
+  box-sizing: border-box;
 }
 
 .pitch-rise {
-    border-left: none;
-    border-top: none;
+  border-left: none;
+  border-top: none;
 }
 
 .pitch-high {
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
 }
 
 .pitch-drop {
-    border-left: none;
-    border-bottom: none;
+  border-left: none;
+  border-bottom: none;
 }
 
 .pitch-low {
-    border-left: none;
-    border-right: none;
-    border-top: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
 }
 
-.card-heiban {
-    color: white;
-    font-weight: 500;
-    background: linear-gradient(
-        90deg,
-        rgba(34, 23, 214, 1) 0%,
-        rgba(0, 212, 255, 1) 100%
-    );
+.card-heiban（平板） {
+  background: linear-gradient(
+    90deg,
+    rgba(154, 0, 255, 1) 0%,
+    rgba(8, 0, 255, 1) 100%
+  );
+}
+
+.card-atamadaka（頭高） {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 18, 1) 0%,
+    rgba(255, 196, 0, 1) 100%
+  );
+}
+.card-odaka（尾高） {
+  background: linear-gradient(
+    90deg,
+    rgb(43, 255, 0) 0%,
+    rgb(33, 174, 255) 100%
+  );
+}
+.card-nakadaka（中高） {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 39, 1) 0%,
+    rgba(255, 0, 254, 1) 100%
+  );
 }
