@@ -30,16 +30,31 @@ code {
     monospace;
 }
 
-input {
+form {
+  display: grid;
+  grid-template-columns: 20% 10%;
+  justify-content: center;
+}
+
+.input-container {
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
-  padding: 1em;
   background-color: rgb(255, 255, 255);
   color: var(--text-main);
   font-size: small;
-  border: none;
+
   border-radius: 1em;
   margin-right: 2em;
   min-width: 20%;
+}
+
+.search-icon {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+input {
+  padding: 1em;
+  border: none;
 }
 
 input::placeholder {

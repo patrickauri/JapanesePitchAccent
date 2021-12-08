@@ -1,3 +1,5 @@
+import { faSearch } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import React, { useState } from "react"
 import PitchCard from "./components/PitchCard"
 const db = require("./db/NHKdata.json")
@@ -29,7 +31,10 @@ const App = () => {
       <h1>KT Accent</h1>
       <h2>Japanese Pitch Accent Dictionary</h2>
       <form onSubmit={(e) => handleSubmit(e)}>
-        <input type="text" placeholder="Search Japanese Word" />
+        <div className="input-container">
+          <FontAwesomeIcon icon={faSearch} className="search-icon" />
+          <input type="text" placeholder="Search Japanese Word" />
+        </div>
         <button type="submit">Search</button>
       </form>
       <div className="results-container">
