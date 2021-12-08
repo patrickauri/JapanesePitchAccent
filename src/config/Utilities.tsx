@@ -42,8 +42,8 @@ export const IsSmallKana = (k: string) => {
 }
 
 export const ParseNHK = (data: any) => {
-    const dWord = data['Word 1A']
-    const dPitch = data['Pitch 1.1']
+    const dWord: string = data['Word 1A']
+    let dPitch: string = data['Pitch 1.1']
     let dMora = 0
 
     let result: Result = {
@@ -62,17 +62,23 @@ export const ParseNHK = (data: any) => {
 
     const ParseNHKPitchNumber = () => {
         if (dPitch) {
+            if (dPitch.includes('・')) {
+                dPitch = dPitch.replace('・', '')
+            }
             let a: string[] = []
-
             if (dPitch.indexOf('￣') === -1) {
                 // Kifukushiki
                 a = dPitch.split('')
+                let dropFound = false
                 a.forEach((e, i) => {
                     if (e.charCodeAt(0) === 12442) {
                         a.splice(i, 1)
                     }
                     if (e === '＼') {
-                        result.pitchNumber = i
+                        if (!dropFound) {
+                            result.pitchNumber = i
+                            dropFound = true
+                        }
                     }
                 })
             } else {
