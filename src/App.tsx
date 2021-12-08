@@ -23,7 +23,9 @@ const App = () => {
     e.preventDefault()
     const input = e.target[0].value
 
-    getPitch(input)
+    if (input && input !== "") {
+      getPitch(input)
+    }
   }
 
   return (
