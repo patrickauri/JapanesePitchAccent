@@ -130,6 +130,7 @@ button:hover {
     color: rgba(255, 255, 255, 1);
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     font-weight: 500;
+    background: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.8) 100%);
 }
 
 .results-container {
@@ -143,7 +144,6 @@ button:hover {
 .pitch-low {
     border-style: solid;
     border-color: var(--background-btn-primary);
-
     font-size: 1.5em;
     font-weight: 300;
 }
@@ -170,7 +170,7 @@ button:hover {
     border-top: none;
 }
 
-.card-heiban（平板） {
+/* .card-heiban（平板） {
     background: linear-gradient(
         90deg,
         rgba(154, 0, 255, 1) 0%,
@@ -198,7 +198,7 @@ button:hover {
         rgba(255, 0, 39, 1) 0%,
         rgba(255, 0, 254, 1) 100%
     );
-}
+} */
 
 @media only screen and (max-width: 768px) {
     form {
