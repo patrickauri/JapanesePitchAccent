@@ -8,15 +8,16 @@ const db = require("./db/NHKdata.json")
 
 const App = () => {
   const [pitch, setPitch] = useState([])
+  const [errorMsg, setErrorMsg] = useState<string>()
 
   const getPitch = (e: any) => {
     // Get all results starting with the query
     const results = db.filter((item: any) => item["Word 1A"].includes(e))
-    if (results) {
-      // item['Word 1A'][item['Word 1A'].indexOf(e) - 1] === '【'
-
+    if (results.length > 0) {
+      setErrorMsg("")
       setPitch(results)
     } else {
+      setErrorMsg(`There are no results for: ${e}`)
       setPitch([])
     }
   }
@@ -53,6 +54,7 @@ const App = () => {
           </Animate>
         ))}
       </div>
+      <div className="errorMsg">{errorMsg}</div>
     </React.Fragment>
   )
 }
