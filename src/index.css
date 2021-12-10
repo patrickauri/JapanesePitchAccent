@@ -1,173 +1,185 @@
 :root {
-    --text-main: rgb(36, 36, 36);
-    --text-secondary: rgb(173, 173, 173);
-    --background-btn-primary: rgb(66, 132, 255);
-    --background-btn-contrast: rgb(6, 15, 32);
-    --text-btn-primary: white;
+  --text-main: rgb(36, 36, 36);
+  --text-secondary: rgb(173, 173, 173);
+  --background-btn-primary: rgb(66, 132, 255);
+  --background-btn-contrast: rgb(6, 15, 32);
+  --text-btn-primary: white;
 }
 * {
-    font-family: 'Murecho', sans-serif;
+  font-family: "Murecho", sans-serif;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
-    background-color: rgb(236, 236, 243);
-    color: var(--text-main);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  background-color: rgb(236, 236, 243);
+  color: var(--text-main);
 }
 
 h2 {
-    font-size: medium;
-    font-weight: normal;
-    color: var(--text-secondary);
+  font-size: medium;
+  font-weight: normal;
+  color: var(--text-secondary);
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 form {
-    display: grid;
+  /* display: grid;
     grid-template-columns: 20% 10%;
-    justify-content: center;
+    justify-content: center; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .input-container {
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+  background-color: white;
+  padding: 0.5em;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 1em;
+  margin-right: 1em;
+  /* 
+  color: var(--text-main);
     background-color: rgb(255, 255, 255);
-    color: var(--text-main);
     font-size: small;
     display: grid;
     grid-template-columns: 25px auto;
     align-items: center;
     justify-content: center;
-    border-radius: 1em;
     margin-right: 2em;
-    min-width: 20%;
+    min-width: 20%; */
 }
 
 .search-icon {
-    font-size: 15px;
-    color: rgba(0, 0, 0, 0.3);
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.3);
+  padding-right: 0.5em;
 }
 
 input {
-    padding: 1em;
-    padding-left: 0;
-    border: none;
+  /* padding: 1em;
+  padding-left: 0;
+  */
+  border: none;
 }
 
 input::placeholder {
-    color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 input:focus,
 button:focus {
-    outline: none;
+  outline: none;
 }
 
 button {
-    min-width: 8%;
-    padding: 1em;
-    color: var(--text-main);
-    font-size: small;
-    font-weight: bold;
-    border: none;
-    border-radius: 1em;
-    background-color: var(--background-btn-contrast);
-    color: var(--text-btn-primary);
+  min-width: 8%;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  padding-left: 1.2em;
+  padding-right: 1.2em;
+  color: var(--text-main);
+  font-size: small;
+  font-weight: bold;
+  border: none;
+  border-radius: 1em;
+  background-color: var(--background-btn-contrast);
+  color: var(--text-btn-primary);
 }
 
 button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #root {
-    height: 80vh;
-    text-align: center;
+  height: 80vh;
+  text-align: center;
 }
 
 .card {
-    margin: 1em;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
-    max-width: 30em;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 1.5em;
+  margin-bottom: 1em;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+  max-width: 30em;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 1.5em;
 }
 
 .card-top {
-    padding: 1em 1em 0 1em;
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: center;
+  padding: 1em 1em 0 1em;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
 }
 
 .card-number {
-    color: var(--text-secondary);
+  color: var(--text-secondary);
 }
 
 .card-title {
-    font-weight: bold;
-    font-size: large;
-    margin-right: 0.5em;
+  font-weight: bold;
+  font-size: large;
+  margin-right: 0.5em;
 }
 
 .card-reading {
-    padding: 1em;
+  padding: 1em;
 }
 
 .card-bottom {
-    border-radius: 0 0 1.5em 1.5em;
-    font-size: small;
-    padding: 0.4em 1em 0.4em 1em;
-    color: rgba(255, 255, 255, 1);
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-    font-weight: 500;
-    background: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.8) 100%);
+  border-radius: 0 0 1.5em 1.5em;
+  font-size: small;
+  padding: 0.4em 1em 0.4em 1em;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+  background: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.8) 100%);
 }
 
 .results-container {
-    margin-top: 2em;
-    display: grid;
+  margin-top: 2em;
+  display: grid;
 }
 
 .pitch-rise,
 .pitch-high,
 .pitch-drop,
 .pitch-low {
-    border-style: solid;
-    border-color: var(--background-btn-primary);
-    font-size: 1.5em;
-    font-weight: 300;
+  border-style: solid;
+  border-color: var(--background-btn-primary);
+  font-size: 1.5em;
+  font-weight: 300;
 }
 
 .pitch-rise {
-    border-left: none;
-    border-top: none;
+  border-left: none;
+  border-top: none;
 }
 
 .pitch-high {
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
 }
 
 .pitch-drop {
-    border-left: none;
-    border-bottom: none;
+  border-left: none;
+  border-bottom: none;
 }
 
 .pitch-low {
-    border-left: none;
-    border-right: none;
-    border-top: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
 }
 
 /* .card-heiban（平板） {
@@ -201,10 +213,13 @@ button:hover {
 } */
 
 @media only screen and (max-width: 768px) {
-    form {
-        justify-content: space-around;
-    }
-    button {
-        width: 50%;
-    }
+  /* form {
+    justify-content: space-around;
+  }
+  button {
+    width: 50%;
+  } */
+  .card {
+    width: 90vw;
+  }
 }
