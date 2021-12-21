@@ -12,7 +12,11 @@ const App = () => {
 
   const getPitch = (e: any) => {
     // Get all results starting with the query
-    const results = db.filter((item: any) => item["Word 1A"].includes(e))
+    const results = db.filter(
+      (item: any) =>
+        item["Word 1A"].startsWith(e) ||
+        item["Word 1A"].indexOf(e) === item["Word 1A"].indexOf("【") + 1
+    )
     if (results.length > 0) {
       setErrorMsg("")
       setPitch(results)
