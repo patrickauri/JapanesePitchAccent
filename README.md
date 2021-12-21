@@ -1,3 +1,6 @@
 # Todo
 
-Update fetch to get correct data
+-   Fix small kana pitch numbers
+-   Sort results so the exact searched term comes first
+-   Add verb conjugations
+-   Refactor PitchCard so that we can add multiple dictionaries in the future
