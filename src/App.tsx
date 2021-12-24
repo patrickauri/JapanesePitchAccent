@@ -18,6 +18,7 @@ const App = () => {
         item["Word 1A"].indexOf(e) === item["Word 1A"].indexOf("【") + 1
     )
     if (results.length > 0) {
+      console.table(results)
       setErrorMsg("")
       setPitch(results)
     } else {
