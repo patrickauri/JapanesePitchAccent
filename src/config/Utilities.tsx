@@ -6,12 +6,20 @@ enum PitchType {
   NONE,
 }
 
+enum WordType {
+  Noun,
+  Verb,
+  Adj,
+  OTHER,
+}
+
 interface Result {
   word: string
   pitchNumber: number
   reading: string
   pitchType: PitchType
   mora: number
+  wordType: WordType
 }
 
 export const IsSmallKana = (k: string) => {
@@ -52,6 +60,7 @@ export const ParseNHK = (data: any) => {
     reading: "no reading",
     pitchType: PitchType.NONE,
     mora: 0,
+    wordType: WordType.OTHER,
   }
 
   const ParseNHKWord = () => {
@@ -122,11 +131,21 @@ export const ParseNHK = (data: any) => {
     }
   }
 
+  const ParseNHKWordType = () => {
+    if (data["Verb 1.1"] !== undefined) {
+      result.wordType = WordType.Verb
+    }
+    if (data["Adj 1.1"] !== undefined) {
+      result.wordType = WordType.Adj
+    }
+  }
+
   ParseNHKWord()
   ParseNHKPitchNumber()
   ParseNHKReading()
   ParseNHKMora()
   ParseNHKPitchType()
+  ParseNHKWordType()
 
   return result
 }

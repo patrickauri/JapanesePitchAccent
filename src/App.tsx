@@ -18,6 +18,7 @@ const App = () => {
         item["Word 1A"].indexOf(e) === item["Word 1A"].indexOf("【") + 1
     )
     if (results.length > 0) {
+      console.table(results)
       setErrorMsg("")
       setPitch(results)
     } else {
@@ -37,8 +38,10 @@ const App = () => {
 
   return (
     <React.Fragment>
-      <h1>KT Accent</h1>
-      <h2>Japanese Pitch Accent Dictionary</h2>
+      <a href=".">
+        <h1>Pitch Accent</h1>
+      </a>
+      <h2 style={{ marginBottom: "2em" }}>Japanese Pitch Accent Dictionary</h2>
       <form onSubmit={(e) => handleSubmit(e)}>
         <div className="input-container">
           <FontAwesomeIcon icon={faSearch} className="search-icon" />
@@ -59,6 +62,12 @@ const App = () => {
         ))}
       </div>
       <div className="errorMsg">{errorMsg}</div>
+
+      <a href="https://patrickauri.com" target="_blank" rel="noreferrer">
+        <p className="text-secondary" style={{ marginBottom: "1em" }}>
+          Created by Patrick Auri
+        </p>
+      </a>
     </React.Fragment>
   )
 }

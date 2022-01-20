@@ -19,6 +19,18 @@ body {
   color: var(--text-main);
 }
 
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+a,
+a:hover,
+a:visited,
+a:focus {
+  text-decoration: none;
+  color: inherit;
+}
+
 h2 {
   font-size: medium;
   font-weight: normal;
@@ -117,8 +129,9 @@ button:hover {
 .card-top {
   padding: 1em 1em 0 1em;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   justify-content: center;
+  grid-gap: 0.5em;
 }
 
 .card-number {
@@ -128,7 +141,6 @@ button:hover {
 .card-title {
   font-weight: bold;
   font-size: large;
-  margin-right: 0.5em;
 }
 
 .card-reading {
