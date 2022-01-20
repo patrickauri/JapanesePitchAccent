@@ -1,6 +1,20 @@
-# Todo
+# Japanese Pitch Accent
 
--   Fix small kana pitch numbers
--   Sort results so the exact searched term comes first
--   Add verb conjugations
--   Refactor PitchCard so that we can add multiple dictionaries in the future
+Japanese Pitch Accent (JPA) is a web application for looking up the pitch accent of Japanese words.
+
+### [Try it here 👈](https://pitch.patrickauri.com)
+
+## ✅ Current Features
+
+- Search words in kana (hiragana/katakana) or kanji.
+
+## 🔥 Coming in the future
+
+- Searching words in romaji
+- Adjective & verb conjugation
+- Dark mode
+- Pitch accent explanation (chart/video)
+
+## ❌ Known bugs
+
+- Some words don't generate a pitch graph.

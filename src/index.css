@@ -19,6 +19,18 @@ body {
   color: var(--text-main);
 }
 
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+a,
+a:hover,
+a:visited,
+a:focus {
+  text-decoration: none;
+  color: inherit;
+}
+
 h2 {
   font-size: medium;
   font-weight: normal;
