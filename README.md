@@ -2,7 +2,7 @@
 
 Japanese Pitch Accent (JPA) is a web application for looking up the pitch accent of Japanese words.
 
-### [Try it here 👈](https://pitch.patrickauri.com)
+## [Try it here 👈](https://pitch.patrickauri.com)
 
 ## ✅ Current Features
 

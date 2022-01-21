@@ -68,6 +68,21 @@ const App = () => {
           Created by Patrick Auri
         </p>
       </a>
+      <a
+        className="github-button"
+        href="https://github.com/patrickauri"
+        aria-label="Follow @patrickauri on GitHub"
+      >
+        Follow @patrickauri
+      </a>
+      <a
+        className="github-button"
+        href="https://github.com/patrickauri/japanesepitchaccent"
+        data-icon="octicon-star"
+        aria-label="Star patrickauri/japanesepitchaccent on GitHub"
+      >
+        Star
+      </a>
     </React.Fragment>
   )
 }
