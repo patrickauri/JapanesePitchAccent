@@ -5,6 +5,7 @@ import PitchCard from "./components/PitchCard"
 import "animate.css"
 import Animate from "@charlesvien/react-animatecss"
 const db = require("./db/NHKdata.json")
+const romajiConv = require("@koozaki/romaji-conv")
 
 const App = () => {
   const [pitch, setPitch] = useState([])
@@ -12,17 +13,26 @@ const App = () => {
 
   const getPitch = (e: any) => {
     // Get all results starting with the query
-    const results = db.filter(
+
+    let input = e
+    if (e.match(/[a-z]/i)) {
+      input = romajiConv.toHiragana(e)
+    }
+    console.log(input)
+
+    // Get raw result
+    let results = db.filter(
       (item: any) =>
-        item["Word 1A"].startsWith(e) ||
-        item["Word 1A"].indexOf(e) === item["Word 1A"].indexOf("【") + 1
+        item["Word 1A"].startsWith(input) ||
+        item["Word 1A"].indexOf(input) === item["Word 1A"].indexOf("【") + 1
     )
+
     if (results.length > 0) {
-      console.table(results)
+      //console.table(results)
       setErrorMsg("")
       setPitch(results)
     } else {
-      setErrorMsg(`There are no results for: ${e}`)
+      setErrorMsg(`There are no results for: ${e}.`)
       setPitch([])
     }
   }
@@ -39,7 +49,7 @@ const App = () => {
   return (
     <React.Fragment>
       <a href=".">
-        <h1>Pitch Accent</h1>
+        <h1>Japanese Pitch Accent</h1>
       </a>
       <h2 style={{ marginBottom: "2em" }}>Japanese Pitch Accent Dictionary</h2>
       <form onSubmit={(e) => handleSubmit(e)}>
