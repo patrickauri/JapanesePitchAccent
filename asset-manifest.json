@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/patrickauri.github.io/JapanesePitchAccent/static/css/main.21f8d176.chunk.css",
+    "main.js": "/patrickauri.github.io/JapanesePitchAccent/static/js/main.e6aeda62.chunk.js",
+    "main.js.map": "/patrickauri.github.io/JapanesePitchAccent/static/js/main.e6aeda62.chunk.js.map",
+    "runtime-main.js": "/patrickauri.github.io/JapanesePitchAccent/static/js/runtime-main.43665e07.js",
+    "runtime-main.js.map": "/patrickauri.github.io/JapanesePitchAccent/static/js/runtime-main.43665e07.js.map",
+    "static/css/2.a1596f27.chunk.css": "/patrickauri.github.io/JapanesePitchAccent/static/css/2.a1596f27.chunk.css",
+    "static/js/2.fb62bd3a.chunk.js": "/patrickauri.github.io/JapanesePitchAccent/static/js/2.fb62bd3a.chunk.js",
+    "static/js/2.fb62bd3a.chunk.js.map": "/patrickauri.github.io/JapanesePitchAccent/static/js/2.fb62bd3a.chunk.js.map",
+    "static/js/3.777d6dd7.chunk.js": "/patrickauri.github.io/JapanesePitchAccent/static/js/3.777d6dd7.chunk.js",
+    "static/js/3.777d6dd7.chunk.js.map": "/patrickauri.github.io/JapanesePitchAccent/static/js/3.777d6dd7.chunk.js.map",
+    "index.html": "/patrickauri.github.io/JapanesePitchAccent/index.html",
+    "static/css/2.a1596f27.chunk.css.map": "/patrickauri.github.io/JapanesePitchAccent/static/css/2.a1596f27.chunk.css.map",
+    "static/css/main.21f8d176.chunk.css.map": "/patrickauri.github.io/JapanesePitchAccent/static/css/main.21f8d176.chunk.css.map",
+    "static/js/2.fb62bd3a.chunk.js.LICENSE.txt": "/patrickauri.github.io/JapanesePitchAccent/static/js/2.fb62bd3a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.43665e07.js",
+    "static/css/2.a1596f27.chunk.css",
+    "static/js/2.fb62bd3a.chunk.js",
+    "static/css/main.21f8d176.chunk.css",
+    "static/js/main.e6aeda62.chunk.js"
+  ]
+}
