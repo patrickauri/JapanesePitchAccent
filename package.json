@@ -2,7 +2,7 @@
   "name": "simplepitch",
   "homepage": "patrickauri.github.io/JapanesePitchAccent",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@charlesvien/react-animatecss": "^1.0.10",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
